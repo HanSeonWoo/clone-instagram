@@ -1,17 +1,15 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+인스타그램 클론 코딩 프로젝트입니다.
+Next.js
+
+추가할 것
+
+사용 방법 필요하면 설명글
+유튜브 영상으로 소개하는 링크 ..
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1234
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
