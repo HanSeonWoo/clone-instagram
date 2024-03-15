@@ -29,12 +29,6 @@ const data = [
 ];
 export default function HomePage() {
   // session 유무에 따라 로그인 페이지를 노출할 수 있음.
-  // if (true) {
-  //   return <Login />;
-  // }
-
-  // 데이터를 받아옴s
-
   return (
     <main className="">
       {data.map(({ user, content, created_at, liked_users, media }, index) => {
