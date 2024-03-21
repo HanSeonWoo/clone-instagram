@@ -31,7 +31,7 @@ export default function Post({ post }: { post: PostType }) {
 
   return (
     <article className="flex w-128 select-none flex-col items-center space-y-3 border-b-[0.5px] border-gray-600 border-opacity-70 p-4">
-      <div className="flex w-full flex-row items-center px-1">
+      <section className="flex w-full flex-row items-center px-1">
         <Image
           className="pointer-events-none rounded-full object-cover"
           width={36}
@@ -46,7 +46,7 @@ export default function Post({ post }: { post: PostType }) {
 
         <div style={{ flex: 1 }} />
         <FaEllipsisH className="hover:cursor-pointer" onClick={() => {}} />
-      </div>
+      </section>
       <Image
         className="pointer-events-none max-h-[600px] w-[512px] rounded-md object-contain"
         height={512}
@@ -55,7 +55,7 @@ export default function Post({ post }: { post: PostType }) {
         alt="post photo contain"
       />
 
-      <div className="flex w-full flex-row space-x-4">
+      <section className="flex w-full flex-row space-x-4">
         {isLiked ? (
           <FaHeart
             size={24}
@@ -105,12 +105,12 @@ export default function Post({ post }: { post: PostType }) {
                 active:hover:text-gray-600"
           onClick={() => {}}
         />
-      </div>
-      <div className="flex w-full select-text flex-row space-x-1 text-sm font-semibold">
+      </section>
+      <section className="flex w-full select-text flex-row space-x-1 text-sm font-semibold">
         <span>좋아요</span>
         <span>{liked_users.length}개</span>
-      </div>
-      <div className="w-full select-text space-x-1 ">
+      </section>
+      <section className="w-full select-text space-x-1 ">
         <span className="text-sm font-bold ">{user.name}</span>
         <span className="text-sm ">
           {isClickedMore ? content : truncate(content, 33)}
@@ -125,7 +125,7 @@ export default function Post({ post }: { post: PostType }) {
             더보기
           </span>
         )}
-      </div>
+      </section>
       <form className="flex w-full flex-row">
         <input
           className="flex-1 bg-inherit text-sm outline-none"

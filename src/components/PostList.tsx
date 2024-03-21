@@ -1,4 +1,5 @@
 "use client";
+import useSWR from "swr";
 import Post from "./Post";
 
 const data = [
@@ -33,6 +34,9 @@ const data = [
 ];
 
 export default function PostList() {
+  const { data: datas, error } = useSWR("/api/hello");
+  console.log("🚀 ~ PostList ~ data:", datas);
+
   return (
     <div className="flex flex-col items-center">
       {data.map((dataa, index) => {
