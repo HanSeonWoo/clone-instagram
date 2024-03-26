@@ -34,7 +34,7 @@ const data = [
 ];
 
 export default function PostList() {
-  const { data: datas, error } = useSWR("/api/hello");
+  const { data: datas, error } = useSWR("/api/posts");
   console.log("🚀 ~ PostList ~ data:", datas);
 
   return (

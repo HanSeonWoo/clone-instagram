@@ -1,16 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import greenstagram from "../../public/greenstagram.png";
 import { FaApple } from "react-icons/fa";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
 import { FaFacebookSquare } from "react-icons/fa";
 import Link from "next/link";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const APPSTORE_LINK = "https://apps.apple.com/us/app/instagram/id389801252";
 const GOOGLEPLAY_LINK =
   "https://play.google.com/store/apps/details?id=com.instagram.android";
 
 export default function Login() {
-  // 메인은 세로에다가
   return (
     <main className="">
       {/* 가로 ( 이미지 / 로그인 컴포넌트 ) */}
@@ -53,9 +55,13 @@ export default function Login() {
             <button
               className=" flex items-center px-4 py-2 font-bold text-blue-800"
               type="button"
+              onClick={() => {
+                signIn();
+              }}
             >
-              <FaFacebookSquare size={24} />
-              <p className="ml-2 text-sm">Facebook으로 로그인</p>
+              {/* <FaFacebookSquare size={24} /> */}
+              {/* <p className="ml-2 text-sm">Facebook으로 로그인</p> */}
+              <p className="ml-2 text-sm">소셜 로그인</p>
             </button>
 
             <Link

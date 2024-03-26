@@ -1,12 +1,19 @@
+"use client";
+
 import Login from "@/components/Login";
 import PostList from "@/components/PostList";
-import SWRContext from "@/contexts/SWRContext";
+import { useSession } from "next-auth/react";
 
 export default function HomePage() {
-  // session 유무에 따라 로그인 페이지를 노출할 수 있음.
+  const { data: session } = useSession();
+
+  if (!session) {
+    return <Login />;
+  }
+
   return (
     <main className="">
-      <SWRContext>{true ? <PostList /> : <Login />}</SWRContext>
+      <PostList />
     </main>
   );
 }
