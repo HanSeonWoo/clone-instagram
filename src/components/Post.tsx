@@ -9,7 +9,7 @@ import { FaRegBookmark } from "react-icons/fa";
 import { FaBookmark } from "react-icons/fa";
 import { format, register } from "timeago.js";
 import koLocale from "timeago.js/lib/lang/ko"; //한국어 선택
-import { truncate } from "@/app/functions/truncate";
+import { truncate } from "@/functions/truncate";
 import { useState } from "react";
 
 register("ko", koLocale);

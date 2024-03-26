@@ -1,4 +1,4 @@
-import { client } from "@/app/services/sanity";
+import { client } from "@/service/sanity";
 
 type OAuthUser = {
   id: string;

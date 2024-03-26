@@ -1,5 +1,5 @@
+import { authOptions } from "@/service/nextAuth";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../auth/[...nextauth]/route";
 
 export async function GET(request: Request) {
   console.log("🚀 ~ GET ~ request:", request);
