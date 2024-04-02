@@ -7,9 +7,10 @@ export async function GET(requset: Request) {
   console.log("session", session);
 
   if (!session) {
-    Response.error();
+    return Response.error();
   }
-  const res = await getUserByUsername(session.user?.name);
+
+  const res = await getUserByUsername(session.user?.name || "");
   console.log("🚀 ~ GET ~ res:", res);
 
   return Response.json({ data: "안녕" });
