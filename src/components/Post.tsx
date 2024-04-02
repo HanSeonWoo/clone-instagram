@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import { FaEllipsisH } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa6";

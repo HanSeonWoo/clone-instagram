@@ -1,6 +1,7 @@
 "use client";
 import useSWR from "swr";
 import Post from "./Post";
+import { signOut } from "next-auth/react";
 
 const data = [
   {
@@ -39,6 +40,14 @@ export default function PostList() {
 
   return (
     <div className="flex flex-col items-center">
+      <button
+        onClick={() => {
+          signOut();
+        }}
+      >
+        Sign Out
+      </button>
+
       {data.map((dataa, index) => {
         return <Post post={dataa} key={index} />;
       })}

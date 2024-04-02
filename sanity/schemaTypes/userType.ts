@@ -10,6 +10,10 @@ export const userType = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'username',
+      type: 'string',
+    }),
+    defineField({
       name: 'image',
       type: 'image',
     }),

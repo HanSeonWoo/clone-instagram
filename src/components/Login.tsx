@@ -53,23 +53,16 @@ export default function Login() {
             </div>
 
             <button
-              className=" flex items-center px-4 py-2 font-bold text-blue-800"
+              className="flex items-center rounded-md border-2 border-red-500 px-4 py-2 font-bold text-blue-800"
               type="button"
               onClick={() => {
                 signIn();
               }}
             >
-              {/* <FaFacebookSquare size={24} /> */}
-              {/* <p className="ml-2 text-sm">Facebook으로 로그인</p> */}
-              <p className="ml-2 text-sm">소셜 로그인</p>
+              <p className="ml-2 text-sm">여기를 눌러 진행해주세요</p>
             </button>
 
-            <Link
-              href={"/accounts/password/reset"}
-              className="text-xs text-gray-500"
-            >
-              비밀번호를 잊으셨나요?
-            </Link>
+            <p className="text-xs text-gray-500">비밀번호를 잊으셨나요?</p>
           </div>
 
           <div className="mt-4 flex w-96 flex-col items-center border p-6 shadow-md">
