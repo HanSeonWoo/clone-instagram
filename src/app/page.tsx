@@ -1,5 +1,6 @@
 "use client";
 
+import FollowingBar from "@/components/FollowingBar";
 import Login from "@/components/Login";
 import PostList from "@/components/PostList";
 import { useSession } from "next-auth/react";
@@ -13,6 +14,7 @@ export default function HomePage() {
 
   return (
     <main className="">
+      <FollowingBar />
       <PostList />
     </main>
   );
